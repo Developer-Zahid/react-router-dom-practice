@@ -18,6 +18,9 @@ const Navbar = () => {
                     <li className="navbar__nav__item">
                         <NavLink to="/contact" className="navbar__nav__link">Contact</NavLink>
                     </li>
+                    <li className="navbar__nav__item">
+                        <NavLink to="/other/inner" className="navbar__nav__link">Other</NavLink>
+                    </li>
                 </ul>
             </nav>
         </div>
