@@ -16,3 +16,10 @@ const RootLayout = () => {
 }
 
 export default RootLayout
+
+export function pageChangeAnimation(){
+  document.querySelector(".page-wrapper").classList.add("pageIn")
+  setTimeout(()=>{
+    document.querySelector(".page-wrapper").classList.remove("pageIn")
+  },1200)
+}
