@@ -12,7 +12,10 @@ const Footer = () => {
                         <NavLink to="/" className="footer__navbar__nav__link">Home</NavLink>
                     </li>
                     <li className="footer__navbar__nav__item">
-                        <NavLink to="/about" className="footer__navbar__nav__link">About</NavLink>
+                        <NavLink to="/product" className="footer__navbar__nav__link">Product</NavLink>
+                    </li>
+                    <li className="footer__navbar__nav__item">
+                        <NavLink to="/user" className="footer__navbar__nav__link">User</NavLink>
                     </li>
                     <li className="footer__navbar__nav__item">
                         <NavLink to="/contact" className="footer__navbar__nav__link">Contact</NavLink>

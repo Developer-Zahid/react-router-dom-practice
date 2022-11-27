@@ -1,19 +1,22 @@
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
-import RootLayout, {pageChangeAnimation} from './components/root/RootLayout';
+import RootLayout, {pageChangeAnimation} from './layouts/main/RootLayout';
 import HomePage from './pages/home/HomePage';
-import AboutPage from './pages/about/AboutPage';
+import ProductPage from './pages/products/ProductPage';
 import ContactPage from './pages/contact/ContactPage';
-import Navbar from './components/header/Navbar';
-import Footer from './components/footer/Footer';
+import Navbar from './layouts/header/Navbar';
+import Footer from './layouts/footer/Footer';
+import UserPage from './pages/users/UserPage';
+import { getProductsData } from './data/ProductsData';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <>
   <Route path='/' loader={pageChangeAnimation} element={<RootLayout />}>
-    <Route index element={<> <HomePage /> <AboutPage /> </>}></Route>
-    <Route path='/about' element={<AboutPage />}></Route>
+    <Route index element={<HomePage />}></Route>
+    <Route path='/product' loader={getProductsData} element={<ProductPage />}></Route>
+    <Route path='/user' element={<UserPage />}></Route>
     <Route path='/contact' element={<ContactPage />}></Route>
   </Route>
-  <Route path='/other/inner' element={<> <Navbar /> <HomePage /> <AboutPage /> <ContactPage /> <Footer /> </>}></Route>
+  <Route path='/other/inner' loader={getProductsData} element={<> <Navbar /> <HomePage /> <ProductPage /> <ContactPage /> <Footer /> </>}></Route>
   </>
 ))
 
