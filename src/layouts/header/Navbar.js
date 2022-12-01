@@ -1,8 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { useSelector } from "react-redux";
 import './navbar.css'
 
 const Navbar = () => {
+  const allCartActions = useSelector((state)=> state.allCartActions)
+  console.log(allCartActions.cartArray);
   return (
     <header className="header">
         <div className="container">
@@ -23,6 +26,9 @@ const Navbar = () => {
                     </li>
                     <li className="navbar__nav__item">
                         <NavLink to="/other/inner" className="navbar__nav__link">Other</NavLink>
+                    </li>
+                    <li className="navbar__nav__item">
+                        <NavLink to="/cart" className="navbar__nav__link">Cart ({allCartActions.cartProductAmount})</NavLink>
                     </li>
                 </ul>
             </nav>

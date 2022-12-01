@@ -26,7 +26,7 @@ const HomePage = () => {
                 <i className="bi bi-dash-lg"></i>
               </button>
               <h3 className="counter__text">{counterValues.value}</h3>
-              <button type="button" className="counter__btn" onClick={() => dispatch(increment())}>
+              <button type="button" className="counter__btn" onClick={() => dispatch(incrementByAmount(5))}>
                 <i className="bi bi-plus-lg"></i>
               </button>
             </div>
