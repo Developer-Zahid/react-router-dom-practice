@@ -11,7 +11,7 @@ const cartSlice = createSlice({
             let newCartItem = {}
             newCartItem.id = action.payload.id
             newCartItem.quantity = action.payload.quantity
-            let isProductIdExist = state.cartArray.find((element) => element.id === action.payload.id)
+            let isProductIdExist = state.cartArray.some((element) => element.id === action.payload.id)
             if(!isProductIdExist){
                 state.cartProductAmount += action.payload.quantity
             }else{

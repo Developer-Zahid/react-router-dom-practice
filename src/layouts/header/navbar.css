@@ -1,4 +1,9 @@
 .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
     padding: 15px;
     font-family: var(--font-primary);
     background-color: var(--color-white);
@@ -20,6 +25,28 @@
     gap: 1.5rem;
 }
 
+.navbar__nav__link{
+    position: relative;
+}
+
 .navbar__nav__link.active{
     color: var(--color-primary);
+}
+
+.navbar__nav__link__count{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(70%, -50%);
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    min-width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    font-size: 0.6em;
+    font-weight: 700;
+    padding: 0.4rem;
+    color: var(--color-white);
+    background-color: var(--color-secondary);
 }

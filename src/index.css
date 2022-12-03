@@ -184,3 +184,7 @@ button{
 .text-muted{
   color: var(--color-text);
 }
+
+.main{
+  margin-top: 6rem;
+}

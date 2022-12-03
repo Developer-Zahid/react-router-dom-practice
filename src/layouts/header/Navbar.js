@@ -5,7 +5,6 @@ import './navbar.css'
 
 const Navbar = () => {
   const allCartActions = useSelector((state)=> state.allCartActions)
-  console.log(allCartActions.cartArray);
   return (
     <header className="header">
         <div className="container">
@@ -28,7 +27,10 @@ const Navbar = () => {
                         <NavLink to="/other/inner" className="navbar__nav__link">Other</NavLink>
                     </li>
                     <li className="navbar__nav__item">
-                        <NavLink to="/cart" className="navbar__nav__link">Cart ({allCartActions.cartProductAmount})</NavLink>
+                        <NavLink to="/cart" className="navbar__nav__link">
+                            <i className="bi bi-cart3"></i>
+                            <span className="navbar__nav__link__count">{allCartActions.cartProductAmount}</span>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
