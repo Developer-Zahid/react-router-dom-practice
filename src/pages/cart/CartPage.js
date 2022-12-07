@@ -1,8 +1,6 @@
 import React from 'react'
-import { useLoaderData } from 'react-router-dom'
 
 const CartPage = () => {
-    let allProductsList = useLoaderData()
     return (
         <>
         <section className="cart section-gap">

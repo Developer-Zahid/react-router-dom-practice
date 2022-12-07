@@ -24,7 +24,7 @@ const ProductCard = ({productsInfo}) => {
         <article className="product-card">
             <div className="product-card__header">
                 <figure className="product-card__header__figure">
-                    <img src={thumbnail ?? ''} alt="Product Image" draggable="false" className="product-card__header__figure__image" />
+                    <img src={thumbnail ?? ''} alt="A Product" draggable="false" className="product-card__header__figure__image" />
                 </figure>
             </div>
             <div className="product-card__body">
